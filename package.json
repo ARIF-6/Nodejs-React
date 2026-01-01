@@ -1,0 +1,17 @@
+{
+  "name": "full_scholarship",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "frontend": "cd my-react-app && npm install && npm run dev",
+    "backend": "cd backend && npm install && npm run dev",
+    "install-all": "npm install && cd backend && npm install && cd ../my-react-app && npm install",
+    "dev": "echo Starting both frontend and backend... && start cmd /k \"cd my-react-app && npm run dev\" && cd backend && npm run dev",
+    "start": "npm run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

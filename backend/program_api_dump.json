@@ -1,0 +1,156 @@
+[
+  {
+    "_id": "6951775685d45937043157a2",
+    "title": "Computer Science",
+    "description": "An in-depth program covering algorithms, data structures, and software development.",
+    "startDate": "2025-07-03",
+    "endDate": "2025-07-03"
+  },
+  {
+    "_id": "6951775685d45937043157a3",
+    "title": "Health",
+    "description": "Courses focusing on public health, nutrition, and wellness strategies.",
+    "startDate": "2025-06-01",
+    "endDate": "2025-06-07"
+  },
+  {
+    "_id": "6951775685d45937043157a4",
+    "title": "Mathematics",
+    "description": "Exploration of advanced calculus, linear algebra, and statistics.",
+    "startDate": "2025-06-10",
+    "endDate": "2025-06-17"
+  },
+  {
+    "_id": "6951775685d45937043157a5",
+    "title": "Literature",
+    "description": "Study of classic and contemporary literature, focusing on analysis and critical thinking.",
+    "startDate": "2025-06-15",
+    "endDate": "2025-06-22"
+  },
+  {
+    "_id": "6951775685d45937043157a6",
+    "title": "Physics",
+    "description": "Understanding the fundamental principles of physics and their applications in real-world scenarios.",
+    "startDate": "2025-06-20",
+    "endDate": "2025-06-27"
+  },
+  {
+    "_id": "6951775685d45937043157a7",
+    "title": "Chemistry",
+    "description": "Introduction to organic and inorganic chemistry with laboratory experience.",
+    "startDate": "2025-06-25",
+    "endDate": "2025-07-02"
+  },
+  {
+    "_id": "6951775685d45937043157a8",
+    "title": "Biology",
+    "description": "Comprehensive study of living organisms, including genetics and ecology.",
+    "startDate": "2025-07-01",
+    "endDate": "2025-07-08"
+  },
+  {
+    "_id": "6951775685d45937043157a9",
+    "title": "History",
+    "description": "Examination of historical events and their impact on modern society.",
+    "startDate": "2025-07-05",
+    "endDate": "2025-07-12"
+  },
+  {
+    "_id": "6951775685d45937043157aa",
+    "title": "Geography",
+    "description": "Understanding physical and human geography, including mapping techniques.",
+    "startDate": "2025-07-10",
+    "endDate": "2025-07-17"
+  },
+  {
+    "_id": "6951775685d45937043157ab",
+    "title": "Art",
+    "description": "Exploration of visual arts, including drawing, painting, and sculpture techniques.",
+    "startDate": "2025-07-15",
+    "endDate": "2025-07-22"
+  },
+  {
+    "_id": "6951775685d45937043157ac",
+    "title": "Music",
+    "description": "Study of music theory, composition, and performance across various genres.",
+    "startDate": "2025-07-20",
+    "endDate": "2025-07-27"
+  },
+  {
+    "_id": "6951775685d45937043157ad",
+    "title": "Business",
+    "description": "Fundamentals of business management, marketing, and entrepreneurship.",
+    "startDate": "2025-07-25",
+    "endDate": "2025-08-01"
+  },
+  {
+    "_id": "6951775685d45937043157ae",
+    "title": "Psychology",
+    "description": "Introduction to psychological theories, behavioral science, and mental health.",
+    "startDate": "2025-08-01",
+    "endDate": "2025-08-08"
+  },
+  {
+    "_id": "6951775685d45937043157af",
+    "title": "Sociology",
+    "description": "Exploration of social behavior, institutions, and cultural norms.",
+    "startDate": "2025-08-05",
+    "endDate": "2025-08-12"
+  },
+  {
+    "_id": "6951775685d45937043157b0",
+    "title": "Philosophy",
+    "description": "Critical examination of philosophical ideas and ethical theories.",
+    "startDate": "2025-08-10",
+    "endDate": "2025-08-17"
+  },
+  {
+    "_id": "6951775685d45937043157b1",
+    "title": "Economics",
+    "description": "Understanding microeconomics and macroeconomics principles and their applications.",
+    "startDate": "2025-08-15",
+    "endDate": "2025-08-22"
+  },
+  {
+    "_id": "6951775685d45937043157b2",
+    "title": "Statistics",
+    "description": "Introduction to statistical methods, data analysis, and interpretation.",
+    "startDate": "2025-08-20",
+    "endDate": "2025-08-27"
+  },
+  {
+    "_id": "6951775685d45937043157b3",
+    "title": "Environmental Science",
+    "description": "Study of environmental issues, sustainability, and conservation practices.",
+    "startDate": "2025-08-25",
+    "endDate": "2025-09-01"
+  },
+  {
+    "_id": "6951775685d45937043157b4",
+    "title": "Political Science",
+    "description": "Examination of political systems, theories, and public policy development.",
+    "startDate": "2025-09-01",
+    "endDate": "2025-09-08"
+  },
+  {
+    "_id": "6951775685d45937043157b5",
+    "title": "Computer Engineering",
+    "description": "Integration of computer science and electrical engineering principles in technology development.",
+    "startDate": "2025-09-05",
+    "endDate": "2025-09-12"
+  },
+  {
+    "_id": "6951775685d45937043157b6",
+    "title": "Information Technology",
+    "description": "Focus on IT infrastructure, cybersecurity, and network management.",
+    "startDate": "2025-09-10",
+    "endDate": "2025-09-17"
+  },
+  {
+    "_id": "6951775685d45937043157b7",
+    "title": "Civil Engineering",
+    "description": "Study of design, construction, and maintenance of infrastructure projects.",
+    "startDate": "2025-09-15",
+    "endDate": "2025-09-22"
+  }
+]

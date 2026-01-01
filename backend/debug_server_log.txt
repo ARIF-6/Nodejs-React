@@ -1,0 +1,24 @@
+Fetching applications for user: 6952439a0657dcfb8690b54e
+Found applications count: 0
+Fetching applications for user: 6952439d0657dcfb8690b556
+Found applications count: 0
+[2025-12-29T09:02:57.501Z] Entering applyForProgram. ProgramID param: undefined
+[2025-12-29T09:02:57.512Z] Error in applyForProgram: Cast to Number failed for value "undefined" (type string) at path "programId" for model "Program"
+[2025-12-29T09:03:39.343Z] Entering applyForProgram. ProgramID param: undefined
+[2025-12-29T09:03:39.344Z] Req Params: {"programId":"undefined"}
+[2025-12-29T09:03:39.345Z] Req URL: /api/applications/apply/undefined
+[2025-12-29T09:03:39.347Z] Req BaseURL: /api/applications
+[2025-12-29T09:03:39.349Z] Req Path: /apply/undefined
+[2025-12-29T09:03:39.366Z] Error in applyForProgram: Cast to Number failed for value "undefined" (type string) at path "programId" for model "Program"
+[2025-12-29T09:04:56.644Z] Entering applyForProgram. ProgramID param: undefined
+[2025-12-29T09:04:56.645Z] Req Params: {"programId":"undefined"}
+[2025-12-29T09:04:56.646Z] Req URL: /api/applications/apply/undefined
+[2025-12-29T09:04:56.646Z] Req BaseURL: /api/applications
+[2025-12-29T09:04:56.647Z] Req Path: /apply/undefined
+[2025-12-29T09:04:56.662Z] Error in applyForProgram: Cast to Number failed for value "undefined" (type string) at path "programId" for model "Program"
+[2025-12-29T09:06:27.893Z] Entering applyForProgram. ProgramID param: undefined
+[2025-12-29T09:06:27.894Z] Req Params: {"programId":"undefined"}
+[2025-12-29T09:06:27.894Z] Req URL: /api/applications/apply/undefined
+[2025-12-29T09:06:27.895Z] Req BaseURL: /api/applications
+[2025-12-29T09:06:27.896Z] Req Path: /apply/undefined
+[2025-12-29T09:06:27.911Z] Error in applyForProgram: Cast to Number failed for value "undefined" (type string) at path "programId" for model "Program"
