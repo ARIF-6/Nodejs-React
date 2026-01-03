@@ -80,7 +80,7 @@ const Applicants = () => {
           </motion.div>
 
           <div className="flex items-center gap-4 w-full md:w-auto">
-            <div className="relative flex-1 md:w-80">
+            {/* <div className="relative flex-1 md:w-80">
               <FaSearch className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500" />
               <input
                 type="text"
@@ -89,7 +89,7 @@ const Applicants = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full bg-[#1e293b]/50 border border-white/5 rounded-2xl py-4 pl-14 pr-6 focus:outline-none focus:border-blue-500 transition-all text-sm font-medium placeholder-gray-600"
               />
-            </div>
+            </div> */}
             <button
               onClick={() => navigate("/admin/dashboard")}
               className="bg-white/5 hover:bg-white/10 text-white border border-white/5 transition px-8 py-4 rounded-2xl font-bold flex items-center gap-3 whitespace-nowrap"
@@ -115,10 +115,10 @@ const Applicants = () => {
               <table className="min-w-full text-sm">
                 <thead>
                   <tr className="border-b border-white/5 text-gray-400 uppercase text-[10px] tracking-[0.2em] font-black">
-                    <th className="px-8 py-8 text-left">Internal ID</th>
-                    <th className="px-8 py-8 text-left">Identity Profile</th>
-                    <th className="px-8 py-8 text-left">Contact Email</th>
-                    <th className="px-8 py-8 text-center">System Actions</th>
+                    <th className="px-8 py-8 text-left">ID</th>
+                    <th className="px-8 py-8 text-left">Name</th>
+                    <th className="px-8 py-8 text-left">Email</th>
+                    <th className="px-8 py-8 text-center">Delete</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-white/[0.02]">

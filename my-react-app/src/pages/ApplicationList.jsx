@@ -105,13 +105,13 @@ const ApplicationList = () => {
               <div className="w-12 h-12 bg-blue-600/10 rounded-2xl flex items-center justify-center text-blue-500 border border-blue-500/20 shadow-lg">
                 <FaFileAlt className="text-xl" />
               </div>
-              <h2 className="text-4xl font-bold tracking-tight">Submission <span className="text-gray-500 font-medium">Queue</span></h2>
+              <h2 className="text-4xl font-bold tracking-tight">Review And Manage <span className="text-gray-500 font-medium">Applicant</span></h2>
             </div>
             <p className="text-gray-400 font-medium">Reviewing and managing scholar applications for all programs.</p>
           </motion.div>
 
           <div className="flex items-center gap-4 w-full md:w-auto">
-            <div className="relative flex-1 md:w-80">
+            {/* <div className="relative flex-1 md:w-80">
               <FaSearch className="absolute left-5 top-1/2 -translate-y-1/2 text-gray-500" />
               <input
                 type="text"
@@ -120,7 +120,7 @@ const ApplicationList = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full bg-[#1e293b]/50 border border-white/5 rounded-2xl py-4 pl-14 pr-6 focus:outline-none focus:border-blue-500 transition-all text-sm font-medium placeholder-gray-600"
               />
-            </div>
+            </div> */}
             <button
               onClick={() => navigate("/admin/dashboard")}
               className="bg-white/5 hover:bg-white/10 text-white border border-white/5 transition px-8 py-4 rounded-2xl font-bold flex items-center gap-3 whitespace-nowrap"
@@ -145,8 +145,8 @@ const ApplicationList = () => {
               <table className="min-w-full text-sm">
                 <thead>
                   <tr className="border-b border-white/5 text-gray-400 uppercase text-[10px] tracking-[0.2em] font-black">
-                    <th className="px-8 py-8 text-left">App ID</th>
-                    <th className="px-8 py-8 text-left">Candidate Info</th>
+                    <th className="px-8 py-8 text-left">Applicant ID</th>
+                    <th className="px-8 py-8 text-left">Applicant Info</th>
                     <th className="px-8 py-8 text-left">Scholarship Program</th>
                     <th className="px-8 py-8 text-left">System Status</th>
                     <th className="px-8 py-8 text-center">Administrative Controls</th>

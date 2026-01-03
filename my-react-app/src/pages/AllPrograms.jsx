@@ -140,9 +140,9 @@ const AllPrograms = () => {
             animate={{ opacity: 1, x: 0 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-              Academic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500">Catalog</span>
+              Available <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-500">Programs</span>
             </h2>
-            <p className="text-gray-400 font-medium max-w-xl">Explore our diverse range of scholarship programs designed to support your global educational journey.</p>
+            <p className="text-gray-400 font-medium max-w-xl"></p>
           </motion.div>
 
           <motion.div
@@ -168,7 +168,7 @@ const AllPrograms = () => {
         </div>
 
         {/* Search Bar */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="relative max-w-3xl mb-12"
@@ -181,7 +181,7 @@ const AllPrograms = () => {
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full bg-white/5 border border-white/10 text-white placeholder-gray-500 rounded-[2rem] py-5 pl-16 pr-8 focus:outline-none focus:border-blue-500 transition-all font-medium backdrop-blur-md"
           />
-        </motion.div>
+        </motion.div> */}
 
         {loading ? (
           <div className="flex flex-col items-center py-24 space-y-4">
