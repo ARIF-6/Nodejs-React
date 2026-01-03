@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import API from "./Api";
+import API from "../services/api";
 import { toast } from "react-toastify";
 import { FaKey, FaArrowLeft } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";

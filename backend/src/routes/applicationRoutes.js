@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { applyForProgram, getMyApplications, getAllApplications, updateApplicationStatus, deleteApplication } = require('../controllers/applicationController');
-const { protect, authorize } = require('../middleware/authMiddleware');
+const { protect, authorize } = require('../middlewares/authMiddleware');
 
 router.post('/apply/:programId', protect, applyForProgram);
 router.get('/my', protect, getMyApplications);

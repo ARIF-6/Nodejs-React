@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import API from "./Api";
+import API from "../../services/api";
 import { toast } from "react-toastify";
 import { FaTrash, FaEdit, FaEye, FaArrowLeft, FaFileAlt, FaSearch, FaTimes, FaCheck, FaBan, FaCalendarAlt, FaUniversity, FaGraduationCap, FaUserCircle, FaClock, FaInfoCircle, FaCheckCircle } from "react-icons/fa";
 

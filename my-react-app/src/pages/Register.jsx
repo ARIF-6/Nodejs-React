@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
-import API from "./Api";
+import API from "../services/api";
 import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {

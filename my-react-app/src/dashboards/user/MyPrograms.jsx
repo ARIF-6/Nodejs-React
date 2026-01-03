@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import API from "./Api";
+import API from "../../services/api";
 import { toast } from "react-toastify";
 import {
     FaUniversity,

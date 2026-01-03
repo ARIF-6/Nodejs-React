@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import API from "./Api";
+import API from "../services/api";
 import { toast } from "react-toastify";
 import { FaLock, FaShieldAlt } from "react-icons/fa";
 

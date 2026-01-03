@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaUserGraduate, FaChalkboardTeacher, FaRocket } from "react-icons/fa";
-import { useAuth } from "../AuthContext";
+import { useAuth } from "../context/AuthContext";
 import About from "./About.jsx";
 import Contact from "./Contact.jsx";
 import ScholarshipInfo from "./ScholarshipInfo.jsx";

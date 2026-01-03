@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaTimes, FaGraduationCap } from "react-icons/fa";
-import { useAuth } from "../AuthContext";
+import { useAuth } from "../context/AuthContext";
 import "./Navbar.css";
 
 const Navbar = () => {

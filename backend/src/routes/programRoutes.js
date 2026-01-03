@@ -6,7 +6,7 @@ const {
     updateProgram,
     deleteProgram,
 } = require('../controllers/programController');
-const { protect, authorize } = require('../middleware/authMiddleware');
+const { protect, authorize } = require('../middlewares/authMiddleware');
 
 router.get('/', getPrograms);
 router.post('/', protect, authorize('ADMIN'), createProgram);

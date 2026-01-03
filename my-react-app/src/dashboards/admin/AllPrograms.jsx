@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import API from "./Api";
+import API from "../../services/api";
 import { toast } from "react-toastify";
 import { FaEdit, FaTrash, FaPlus, FaSearch, FaArrowLeft, FaCalendarAlt, FaInfoCircle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../AuthContext";
+import { useAuth } from "../../context/AuthContext";
 
 const AllPrograms = () => {
   const { role } = useAuth();

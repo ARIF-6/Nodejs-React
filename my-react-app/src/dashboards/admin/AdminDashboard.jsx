@@ -10,9 +10,9 @@ import {
   FaCog
 } from "react-icons/fa";
 import { useNavigate, useLocation } from "react-router-dom";
-import API from "./Api";
+import API from "../../services/api";
 import { toast } from "react-toastify";
-import { useAuth } from "../AuthContext";
+import { useAuth } from "../../context/AuthContext";
 
 const AdminDashboard = () => {
   const navigate = useNavigate();

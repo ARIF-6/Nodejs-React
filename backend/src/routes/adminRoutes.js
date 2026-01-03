@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { getDashboardCounts, getUsers, deleteUser } = require('../controllers/adminController');
-const { protect, authorize } = require('../middleware/authMiddleware');
+const { protect, authorize } = require('../middlewares/authMiddleware');
 const User = require('../models/User');
 const Application = require('../models/Application');
 const Program = require('../models/Program');
