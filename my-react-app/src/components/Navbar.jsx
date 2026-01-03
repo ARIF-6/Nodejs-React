@@ -48,7 +48,7 @@ const Navbar = () => {
                         <FaGraduationCap />
                     </motion.div>
                     <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 group-hover:from-blue-600 group-hover:to-indigo-600 transition-all">
-                        ScholarshipHub
+                        Somali.I Scholarship
                     </span>
                 </Link>
 

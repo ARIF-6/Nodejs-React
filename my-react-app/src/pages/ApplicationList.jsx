@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import API from "./Api";
 import { toast } from "react-toastify";
-import { FaTrash, FaEdit, FaEye, FaArrowLeft, FaFileAlt, FaSearch, FaTimes, FaCheck, FaBan, FaCalendarAlt, FaUniversity, FaGraduationCap } from "react-icons/fa";
+import { FaTrash, FaEdit, FaEye, FaArrowLeft, FaFileAlt, FaSearch, FaTimes, FaCheck, FaBan, FaCalendarAlt, FaUniversity, FaGraduationCap, FaUserCircle, FaClock, FaInfoCircle, FaCheckCircle } from "react-icons/fa";
 
 const ApplicationList = () => {
   const [applications, setApplications] = useState([]);
@@ -240,7 +240,7 @@ const ApplicationList = () => {
               initial={{ scale: 0.95, opacity: 0, y: 20 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.95, opacity: 0, y: 20 }}
-              className="bg-[#1e293b] rounded-[3rem] p-10 w-full max-w-4xl shadow-2xl border border-white/5 relative overflow-hidden my-auto"
+              className="bg-[#1e293b] rounded-[3rem] p-10 w-full max-w-5xl shadow-2xl border border-white/5 relative overflow-hidden my-auto"
             >
               <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-blue-600 to-indigo-600"></div>
 
@@ -251,60 +251,118 @@ const ApplicationList = () => {
                   </div>
                   <div>
                     <h3 className="text-3xl font-black text-white leading-tight">Scholar <span className="text-gray-500">Profile</span></h3>
-                    <p className="text-gray-400 font-bold text-xs uppercase tracking-widest">ID: {viewApp.applicationId}</p>
+                    <p className="text-gray-400 font-bold text-xs uppercase tracking-widest">Global ID: {viewApp.applicationId}</p>
                   </div>
                 </div>
-                <button
-                  onClick={() => setViewApp(null)}
-                  className="w-12 h-12 bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white rounded-2xl flex items-center justify-center transition-all border border-white/5"
-                >
-                  <FaTimes />
-                </button>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                <div className="bg-[#0f172a] p-6 rounded-3xl border border-white/5">
-                  <FaUserCircle className="text-blue-500 mb-4" />
-                  <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-1">Full Identity</p>
-                  <p className="text-lg font-bold text-white">{viewApp.fullName}</p>
-                  <p className="text-xs text-blue-400 font-medium italic mt-2">{viewApp.email}</p>
-                </div>
-                <div className="bg-[#0f172a] p-6 rounded-3xl border border-white/5">
-                  <FaCalendarAlt className="text-emerald-500 mb-4" />
-                  <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-1">Birth Record</p>
-                  <p className="text-lg font-bold text-white">{viewApp.dateOfBirth}</p>
-                </div>
-                <div className="bg-[#0f172a] p-6 rounded-3xl border border-white/5">
-                  <FaUniversity className="text-purple-500 mb-4" />
-                  <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-1">Institution</p>
-                  <p className="text-lg font-bold text-white truncate">{viewApp.institution}</p>
-                </div>
-                <div className="bg-[#0f172a] p-6 rounded-3xl border border-white/5">
-                  <FaGraduationCap className="text-rose-500 mb-4" />
-                  <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-1">GPA Performance</p>
-                  <p className="text-lg font-bold text-white">{viewApp.gpa}</p>
-                </div>
-                <div className="md:col-span-2 bg-[#0f172a] p-6 rounded-3xl border border-white/5">
-                  <FaFileAlt className="text-amber-500 mb-4" />
-                  <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-1">Assigned Program</p>
-                  <p className="text-lg font-bold text-white">{viewApp.program?.title}</p>
+                <div className="flex items-center gap-3">
+                  <span className={`px-4 py-2 rounded-xl border text-[10px] font-black tracking-widest uppercase ${getStatusStyle(viewApp.status)}`}>
+                    {viewApp.status}
+                  </span>
+                  <button
+                    onClick={() => setViewApp(null)}
+                    className="w-12 h-12 bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white rounded-2xl flex items-center justify-center transition-all border border-white/5"
+                  >
+                    <FaTimes />
+                  </button>
                 </div>
               </div>
 
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+                {/* Personal Information Column */}
+                <div className="lg:col-span-1 space-y-6">
+                  <h4 className="text-blue-500 font-black text-[10px] uppercase tracking-[0.2em] px-2 mb-4">Personal Information</h4>
+                  <div className="bg-[#0f172a] p-6 rounded-3xl border border-white/5">
+                    <FaUserCircle className="text-blue-500 mb-4" />
+                    <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-1">Full Identity</p>
+                    <p className="text-lg font-bold text-white">{viewApp.fullName}</p>
+                    <p className="text-xs text-blue-400 font-medium italic mt-2">{viewApp.email}</p>
+                  </div>
+                  <div className="bg-[#0f172a] p-6 rounded-3xl border border-white/5">
+                    <FaCalendarAlt className="text-emerald-500 mb-4" />
+                    <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-1">Birth Record</p>
+                    <p className="text-lg font-bold text-white">{viewApp.dateOfBirth}</p>
+                  </div>
+                  <div className="bg-[#0f172a] p-6 rounded-3xl border border-white/5">
+                    <FaClock className="text-amber-500 mb-4" />
+                    <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-1">Submitted On</p>
+                    <p className="text-lg font-bold text-white">
+                      {viewApp.createdAt ? new Date(viewApp.createdAt).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                      }) : 'N/A'}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Academic & Program Column */}
+                <div className="lg:col-span-2 space-y-6">
+                  <h4 className="text-purple-500 font-black text-[10px] uppercase tracking-[0.2em] px-2 mb-4">Academic & Program Alignment</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="bg-[#0f172a] p-6 rounded-3xl border border-white/5">
+                      <FaUniversity className="text-purple-500 mb-4" />
+                      <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-1">Institution</p>
+                      <p className="text-lg font-bold text-white truncate">{viewApp.institution}</p>
+                    </div>
+                    <div className="bg-[#0f172a] p-6 rounded-3xl border border-white/5">
+                      <FaGraduationCap className="text-rose-500 mb-4" />
+                      <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-1">GPA Performance</p>
+                      <p className="text-lg font-bold text-white">{viewApp.gpa}</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-[#0f172a] p-8 rounded-[2.5rem] border border-white/5">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="p-2 bg-indigo-500/10 rounded-xl text-indigo-400">
+                        <FaInfoCircle />
+                      </div>
+                      <div>
+                        <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-0.5">Assigned Scholarship</p>
+                        <h5 className="text-xl font-bold text-white">{viewApp.program?.title}</h5>
+                      </div>
+                    </div>
+                    <p className="text-sm text-gray-400 leading-relaxed font-medium mb-4">
+                      {viewApp.program?.description}
+                    </p>
+                    <div className="flex flex-wrap gap-4 pt-4 border-t border-white/5">
+                      <div className="flex items-center gap-2">
+                        <span className="text-[10px] font-black text-gray-500 uppercase">Start:</span>
+                        <span className="text-xs font-bold text-indigo-400">{viewApp.program?.startDate || 'N/A'}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-[10px] font-black text-gray-500 uppercase">End:</span>
+                        <span className="text-xs font-bold text-indigo-400">{viewApp.program?.endDate || 'N/A'}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Personal Statement - Full Width */}
               <div className="bg-[#0f172a] p-8 rounded-[2.5rem] border border-white/5 mb-10">
                 <p className="text-[10px] font-black text-gray-500 uppercase tracking-widest mb-4 flex items-center gap-2">
                   <span className="w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse"></span>
-                  Scholar Statement
+                  Scholar Personal Statement
                 </p>
-                <div className="max-h-64 overflow-y-auto custom-scrollbar pr-4 text-gray-400 leading-relaxed font-medium">
+                <div className="max-h-64 overflow-y-auto custom-scrollbar pr-4 text-gray-300 leading-relaxed font-medium text-base">
                   {viewApp.personalStatement}
                 </div>
               </div>
 
-              <div className="text-center">
+              <div className="flex flex-col md:flex-row justify-center gap-4">
+                <button
+                  onClick={() => {
+                    setEditApp(viewApp);
+                    setEditedStatus(viewApp.status);
+                    setViewApp(null);
+                  }}
+                  className="px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white rounded-[2rem] font-black text-xs tracking-[0.2em] uppercase transition-all shadow-xl shadow-blue-600/20 flex items-center justify-center gap-2"
+                >
+                  <FaEdit /> Update Status
+                </button>
                 <button
                   onClick={() => setViewApp(null)}
-                  className="px-12 py-5 bg-white text-black rounded-[2rem] font-black text-sm tracking-widest uppercase hover:bg-gray-200 transition-all shadow-xl shadow-black/20"
+                  className="px-10 py-5 bg-white text-black rounded-[2rem] font-black text-xs tracking-[0.2em] uppercase hover:bg-gray-200 transition-all shadow-xl shadow-black/20"
                 >
                   Close Data Sheet
                 </button>
@@ -342,16 +400,16 @@ const ApplicationList = () => {
                     onChange={handleStatusChange}
                     className="w-full bg-[#0f172a] border border-white/5 rounded-2xl py-5 px-6 focus:outline-none focus:border-emerald-500 transition-all font-bold text-white appearance-none"
                   >
-                    <option value="PENDING">PENDING REVIEW</option>
-                    <option value="ACCEPTED">ADMISSION GRANTED</option>
-                    <option value="REJECTED">ADMISSION DENIED</option>
+                    <option value="PENDING">PENDING</option>
+                    <option value="ACCEPTED">Accepted</option>
+                    <option value="REJECTED">Rejected</option>
                   </select>
                 </div>
 
-                <div className="flex gap-4 p-4 bg-emerald-500/5 rounded-2xl border border-emerald-500/10">
+                {/* <div className="flex gap-4 p-4 bg-emerald-500/5 rounded-2xl border border-emerald-500/10">
                   <div className="text-emerald-500 mt-1"><FaCheck className="text-sm" /></div>
                   <p className="text-[11px] text-emerald-400/80 font-medium">Updating status will immediately notify the student and update their academic status dashboard.</p>
-                </div>
+                </div> */}
               </div>
 
               <div className="flex flex-col gap-3">
@@ -361,12 +419,12 @@ const ApplicationList = () => {
                 >
                   EXECUTE UPDATE
                 </button>
-                <button
+                {/* <button
                   onClick={() => setEditApp(null)}
                   className="w-full py-5 bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white font-black rounded-2xl transition-all tracking-widest text-xs border border-white/5"
                 >
                   ABORT ACTION
-                </button>
+                </button> */}
               </div>
             </motion.div>
           </div>
